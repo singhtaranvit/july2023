@@ -1,4 +1,4 @@
-package july2023_lecture_5;
+package com.Lecture5;
 
 import java.time.Duration;
 
@@ -6,9 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class WebElement_Path 
+public class WebElement_Path
 {
 public static WebDriver driver;
 
@@ -28,7 +28,7 @@ public static void main(String[] args) throws InterruptedException {
 	WebElement profileName = driver.findElement(By.linkText("T Singh"));
 	if(profileName.isDisplayed()) {
 		driver.findElement(By.xpath("/html/body/div[2]/div[3]/div[6]/a")).click();
-	}else {		
+	}else {
 		System.out.println("Profile does not exist");
 	}
 	Thread.sleep(2000);
@@ -44,6 +44,6 @@ public static void main(String[] args) throws InterruptedException {
 				Thread.sleep(1000);
 			}
 	driver.quit();
-	
+
 	}
 }

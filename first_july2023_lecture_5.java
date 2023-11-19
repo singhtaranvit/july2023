@@ -1,4 +1,4 @@
-package july2023_lecture_5;
+package com.Lecture5;
 
 import java.time.Duration;
 
@@ -13,9 +13,9 @@ public class first_july2023_lecture_5 {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(10));	
+		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(10));
 driver.get("https://rediff.com");
-		
+
 		String exepectedTitle = "Rediff.com: News | Rediffmail | Stock Quotes | Shopping";
 		String actualTitle = driver.getTitle();
 		if(exepectedTitle.equals(actualTitle)) {
@@ -23,7 +23,7 @@ driver.get("https://rediff.com");
 			}else {
 				System.out.println("My title entered is incorrect");
 			}
-			
+
 			String expURL = "https://www.rediff.com/";
 			if(expURL.equals(driver.getCurrentUrl())){
 				System.out.println("My URl is correct");
